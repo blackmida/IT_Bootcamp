@@ -1,0 +1,37 @@
+form{
+    margin: auto;
+    width: 70%;
+    
+}
+
+label{
+    /* float: left; */
+    margin-left: 10%;
+    margin-right: 1%;
+}
+
+.mainLabel{
+    font-weight: bold;
+    /* float: left; */
+    margin-left: 5%;
+}
+
+.commentClass{
+    font-weight: bold;
+    margin-left: 5%;
+}
+
+.button {
+    margin-left: 7%;
+    margin-top:1%;
+}
+
+.section3{
+    float: left;
+    width: 15%;
+}
+
+label, input, select{
+    margin-top: 2px;
+    margin-bottom: 2px;
+}

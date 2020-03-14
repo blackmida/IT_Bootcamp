@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Responsive Form</title>
+    <meta name="description" content="">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Section1 - naslov i paragraf -->
+    <div class="section1 col-12">
+        <h1>Responsive Forma</h1>
+        <p>Promenite sirinu prozora kako biste videli efekat forme. Kada je ekran manji od 600px, formu kreirati tako da
+            se njeni elementi nalaze jedni ispod drugih.</p>
+    </div>
+
+    <!-- Section2 - forma i dugme  -->
+    <form action="" class="col-12">
+        <div class="row">
+            <label for="" class="col-4">Ime i prezime</label>
+            <input type="text" placeholder="Unesite ime i prezime" class="col-8 formEl" required>
+        </div>
+
+        <div class="row">
+            <label for="" class="col-4">Pretrazite</label>
+            <input type="search" name="search" placeholder="Pretrazite.." class="col-4 formEl search">
+        </div>
+
+        <div class="row">
+            <label for="" class="col-4">Zemlja</label>
+            <select name="" id="" class="col-8 formEl">
+                <option value="" hidden>Izaberite Vasu zemlju</option>
+                <option value="">Italija</option>
+                <option value="">Francuska</option>
+                <option value="">Nemacka</option>
+                <option value="">Madjarska</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <label for="" class="col-4">Opis</label>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Napisite neki opis.." class="col-8 formEl"></textarea>
+        </div>
+        
+        <div class="row">
+            <div class="col-11">&nbsp;</div>
+            <input type="submit" value="Potvrdite" id="submitBtn" class="col-1">
+        </div>
+    </form>
+
+</body>
+
+</html>
