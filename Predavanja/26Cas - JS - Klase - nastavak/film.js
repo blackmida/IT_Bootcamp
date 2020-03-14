@@ -1,56 +1,58 @@
-export default class Film {
-    constructor(n, r, g, o) {
-        this.fNaslov = n;
-        this.fReziser = r;
-        this.fGodinaIzdanja = g;
-        this.fOcene = o;
-    }
-    stampaj() {
-        console.log(`Film '${this.fNaslov}' rezirao ${this.fReziser}, ${this.fGodinaIzdanja}. godine`);
-    }
-    get fNaslov() {
-        return this.naslov;
-    }
-    set fNaslov(n) {
+export class Film {
+    constructor(n, r, gi, o) {
         this.naslov = n;
-    }
-    get fReziser() {
-        return this.reziser;
-    }
-    set fReziser(r) {
         this.reziser = r;
-    }
-    get fGodinaIzdanja() {
-        return this.godinaIzdanja;
-    }
-    set fGodinaIzdanja(g) {
-        if(g > 1800) {
-            this.godinaIzdanja = g;
-        }
-        else {
-            this.godinaIzdanja = 1800;
-        }
-    }
-
-    get fOcene(){
-        return this.ocene;
-    }
-
-    set fOcene(o){
+        this.godinaIzdanja = gi;
         this.ocene = o;
     }
 
-    prosecna(){
-        let s = 0;
-        let br = this.ocene.length;
-        let niz = this.ocene;
-
-        niz.forEach(el => {
-            s+=el;
-        });
-
-        let arsr = s/br;
-        return arsr;
+    get naslov() {
+        return this._naslov;
+    }
+    set naslov(n) {
+        this._naslov = n;
     }
 
+    get reziser() {
+        return this._reziser;
+    }
+    set reziser(r) {
+        this._reziser = r;
+    }
+
+    get godinaIzdanja() {
+        return this._godinaIzdanja;
+    }
+    set godinaIzdanja(gi) {
+        if (gi > 1800) {
+            this._godinaIzdanja = gi;
+        }
+        else {
+            this._godinaIzdanja = 1800;
+        }
+    }
+
+    get ocene(){
+        return this._ocene;
+    }
+
+    set ocene(o){
+        this._ocene = o;
+    }
+
+    stampaj() {
+        console.log(`Film '${this.naslov}' rezirao ${this.reziser}, ${this.godinaIzdanja}.godine.`);
+    }
+
+    prosek(){
+        let suma = 0;
+        let br = this.ocene.length;
+        let niz = this.ocene;
+        niz.forEach(el => {
+            suma+=el;
+        });
+
+        let arsr = suma/br;
+        return arsr;
+    }
 }
