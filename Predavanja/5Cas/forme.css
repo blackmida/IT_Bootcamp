@@ -1,0 +1,15 @@
+form{
+    width: 100%;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    width: 25%;
+    float: left;
+}
+
+#dugme{
+    width: 15%;
+    text-align: center;
+}

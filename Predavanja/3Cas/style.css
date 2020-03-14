@@ -1,0 +1,33 @@
+*{
+    background-color:rgb(192, 214, 250);
+}
+
+h2{
+    text-align: center;
+    color: darkblue;
+}
+
+img{
+    border:5px double blue;
+}
+
+.isti{
+    background-color: rgb(71, 13, 13);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+#poseban{
+    background-color:rgb(248, 191, 185);
+
+}
+
+#poseban a{
+    text-decoration: none;
+    color: darkgreen;
+    background-color: rgb(248, 191, 185);
+}
+
+#poseban a:hover{
+    color: black;
+}

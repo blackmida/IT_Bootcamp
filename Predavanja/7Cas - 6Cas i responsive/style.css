@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+}
+div {
+    background-color: orange;
+    font-size: 22px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    div {
+      background-color: lightblue;
+      font-size: 18px;
+    }
+  }
+
+
+@media only screen and (min-width: 700px) {
+    div {
+      background-color: red;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }

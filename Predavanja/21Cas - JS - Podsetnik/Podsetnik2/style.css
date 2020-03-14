@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    margin-left: 10px;
+}
+
+ul{
+    padding-inline-start: 0;
+}
+
+li{
+    background-color: lightblue;
+    list-style-type: none;
+    margin: 10px;
+    padding: 10px;
+    width: 25%; /*ovde je ona stavila 270px*/
+    border: 1px dotted black;
+    cursor: pointer;
+}
+
+li:hover{
+    background-color: dodgerblue;
+}

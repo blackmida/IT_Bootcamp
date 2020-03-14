@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Forma domaci</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="domaci.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <form action="">
+            <fieldset>
+                <legend>LogIn details</legend>
+
+                <!-- name -->
+                <label for="name" class="mainLabel">Name:</label>
+                <input type="text" name="name" id="name" placeholder="Put your name here nigga">
+                <br>
+
+                <!-- email -->
+                <label for="email" class="mainLabel">Email:</label>
+                <input type="email" name="email" id="">
+                <br>
+
+                <!-- password -->
+                <label for="password" class="mainLabel">Password:</label>
+                <input type="password" name="password" id="" placeholder="Top secret">
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Your feedback</legend>
+                <label for="" id="first" class="mainLabel">Please check all the emotions that applay to you:</label>
+                <br>
+                <label for="angry">Angry</label>
+                <input type="checkbox" name="emmotions" id="angry" checked>
+                <br>
+
+                <label for="sad">Sad</label>
+                <input type="checkbox" name="emmotions" id="sad">
+                <br>
+
+                <label for="happy">Happy</label>
+                <input type="checkbox" name="emmotions" id="happy">
+                <br>
+
+                <label for="ambivalent">Ambivalent</label>               
+                <input type="checkbox" name="emmotions" id="ambivalent">
+                <br>
+
+                <!-- SECTION 2 -->
+
+                <label for="" id="second" class="mainLabel">How satisfied were you with our service</label>
+                <br>
+                <label for="vsatisfied">Very satisfied</label>
+                <input type="radio" name="service" id="vsatisfied">
+                <br>
+
+                <label for="satisfied">Satisfied</label>
+                <input type="radio" name="service" id="satisfied">
+                <br>
+
+                <label for="didntcare">Didn't care</label>
+                <input type="radio" name="service" id="didntcare">
+                <br>
+
+                <label for="dissatisfied">Dissatisfied</label>               
+                <input type="radio" name="service" id="dissatisfied">
+                <br>
+
+                <label for="vdissatisfied">Very dissatisfied</label>               
+                <input type="radio" name="service" id="vdissatisfied">
+                <br>
+
+                <label for="comment" class="commentClass">Further comments:</label>
+                <textarea id="" cols="30" rows="5" placeholder="be positive or be quite"></textarea>
+            </fieldset>
+
+            <label for="" class="mainLabel section3">Bio photo:</label>
+            <input type="file">
+            <br>
+
+            <label for="" class="mainLabel section3">Location visited:</label>
+            <select name="" id="" aria-placeholder="Select Location">
+                <option selected hidden>Select location</option>
+                <option value="">Beograd</option>
+                <option value="">Nis</option>
+                <option value="">Kragujevac</option>               
+            </select>
+            <br>
+
+            <input type="submit" class="button">
+            <br>
+            <input type="reset" class="button">
+        </form>
+        
+        <script src="" async defer></script>
+    </body>
+</html>

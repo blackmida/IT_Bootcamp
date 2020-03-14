@@ -1,0 +1,214 @@
+body{
+    margin: 0;
+}
+
+/* NAVIGACIJA TOPBAR */
+
+.topbar{
+    background-color: #6f6f6f;
+    width: 100%;
+    /* position: relative; */
+    position: fixed;
+    top: 0;
+}
+
+.topbar ul{
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    clear: both;
+}
+
+.topbar li{
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding: 10px 0;
+    
+}
+
+.topbar a{
+    text-decoration: none;
+    color: white;
+    display: block; /* da bi se ceo deo prikazivao kao link */
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+}
+
+.topbar li:hover{
+    background-color: orangered;
+}
+
+/* .topbar ul::after{
+    content: "";
+    display: table;
+    clear: both;
+} */
+
+
+/* HEADER SA SLIKOM I TEKSOM U CENTRU */
+
+header{
+    background-image: url("img/lego_pizza.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 150px;
+    /* position: relative; */
+    /* top: 40px;  OVO SAM UGASIO JER NEMA POTREBE */
+    text-align: center;
+    
+}
+
+header p{
+
+    display: inline;
+    line-height: 150px;
+    /* text-align: center;
+    width: 50%;
+    height: 50%;
+    margin: 0;
+    position: absolute;
+    right: 25%;
+    top: 25%; */
+    color: white;
+    font-weight: bold;
+
+    /* Profedor je uradio ovako
+    top: 45%;
+    text-align: centar;
+    width:100%; */
+}
+
+/* #div2{
+    width: 400px;
+    height: 400px;
+    background-color: brown;
+    position: relative;
+    left: 200px;
+} */
+
+#img1{
+    position: relative;
+    left: 100px;
+    bottom: -50px;
+}
+
+#img2{
+    position: absolute;
+    left: 40px;
+    top: 50%;
+}
+
+
+/*  NAV BAR SUBMENU*/
+.submenu {
+    position: absolute;
+    z-index: 6;
+    color: black;
+    background-color: orangered;
+    width: 25%;
+    margin-top: 10px;
+    display: none;
+}
+
+.submenu a{
+    padding: 7px 0px;
+}
+
+.submenu a:hover{
+    background-color: #6f6f6f;
+}
+
+.dropdown:hover .submenu{
+    display: block;
+}
+
+  /* ASIDE */
+
+  aside{
+      width: 20%;
+      float: left;
+      clear: left;
+  }
+
+  aside ul{
+      list-style-type: none;
+      
+  }
+
+  aside li{
+    background-color: turquoise;
+    width: 50%;
+  }
+
+  aside a{
+      text-decoration: none;
+  }
+
+
+  section{
+      width: 70%;
+      float: right;
+      clear: right;
+      background-color: orangered;
+      
+  }
+
+  .secdiv{
+      width: 33.3%;
+      float: left;
+      text-align: center;
+  }
+
+  .clear::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* section::after{
+    content: "";
+    display: table;
+    clear: both;
+  } */
+
+  /* FOOTER MENU */
+footer {
+    background-color: #6f6f6f;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+footer ul{
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    clear: both;
+}
+
+footer li{
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding: 10px 0;
+    
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+footer li:hover{
+    background-color: orangered;
+}
+
+@media only screen and (max-width: 1080px) {
+    section {
+      background-color: lightblue;
+    }
+  }

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CSS Grid</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- HEADER SEKCIJA -->
+    <header class="col-12">
+        <h3>Ovo je header</h3>
+    </header>
+
+    <!-- SEKCIJA 1 = Meni + aside -->
+    <div class="section1 col-12">
+        <nav class="col-3">
+            <ul>
+                <li><a href="">Jedan</a></li>
+                <li><a href="">Dva</a></li>
+                <li><a href="">Tri</a></li>
+            </ul>
+        </nav>
+
+        <aside class="col-9">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos deserunt facere pariatur harum similique
+                minus quidem distinctio dolore illo quisquam blanditiis earum rem, laboriosam ipsum?</p>
+        </aside>
+    </div>
+
+    <!-- SEKCIJA SA SLIKAMA -->
+    <div class="section2 col-12">
+
+        <div class="col-4">
+            <img src="img/lights.jpg" alt="">
+            <p>Slika polarne svetlosti</p>
+        </div>
+        <div class="col-4">
+            <img src="img/mountains.jpg" alt="">
+            <p>Slika planina</p>
+        </div>
+        <div class="col-4">
+            <img src="img/nature.jpg" alt="">
+            <p>Slika prirode</p>
+        </div>
+
+        <!-- <img src="img/lights.jpg" alt="" class="col-4">
+        <img src="img/mountains.jpg" alt="" class="col-4">
+        <img src="img/nature.jpg" alt="" class="col-4"> -->
+    </div>
+
+    <!-- SEKCIJA SA KARTICAMA -->
+    <div class="section3 col-12">
+        <div class="card col-3">
+            <img src="img/bronze.png" alt="">
+            <h3>Bronze</h3>
+            <p>Discount 5%</p>
+        </div>
+        <div class="card col-4">
+            <img src="img/silver.png" alt="">
+            <h3>Silver</h3>
+            <p>Discount 10%</p>
+        </div>
+        <div class="card col-5">
+            <img src="img/gold.jpg" alt="">
+            <h3>Gold</h3>
+            <p>Discount 15%</p>
+        </div>
+
+    </div>
+
+
+    <!-- <div class="section4 col-12">
+        <table class="col-12">
+            <tr class="col-3">
+                <td><img src="img/bronze.png" alt=""></td>
+                <td><img src="img/silver.png" alt=""></td>
+                <td><img src="img/gold.jpg" alt=""></td>
+            </tr>
+            <tr class="col-4">
+                <td><h3>Bronze</h3></td>
+                <td><h3>Silver</h3></td>
+                <td><h3>Gold</h3></td>
+                
+            </tr>
+            <tr class="col-5">
+                <td>Discount 5%</td>
+                <td>Discount 10%</td>
+                <td>Discount 15%</td>
+            </tr>
+        </table>
+    </div> -->
+
+
+
+
+
+    <!-- SECTION 4 - Sekcija sa formom -->
+    <div class="section4 col-12">
+        <form action="">
+            <div class="red col-12">
+                <label for="" class="col-4">Ime:</label>
+                <input type="text" class="col-8">
+            </div>
+            <div class="red col-12">
+                <label for="" class="col-4">Unesite komentar:</label>
+                <textarea name="" id="" class="col-8"></textarea>
+            </div>
+            <div class="red col-12">
+                <label for="" class="col-4">Izaberite Vas grad</label>
+                <select class="col-8">
+                    <option value="" hidden>Izaberite grad</option>
+                    <option value="ni">Nis</option>
+                    <option value="bg">Beograd</option>
+                    <option value="kg">Kragujevac</option>
+                    <option value="le">Leskovac</option>
+                </select>
+            </div>
+        </form>
+    </div>
+
+
+    <!-- FOOTER SEKCIJA -->
+    <footer class="col-12">
+        <p>Lorem ipsum dolor sit amet.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+body {
+    margin: 0px;
+    font-size: 150%;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.gornji ul{
+    list-style-type: none;
+    /* padding: 10px 10px 10px 0; */
+    padding: 0;
+    background-color: coral;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.gornji li{
+    float: left;
+    padding: 10px;
+    width: 10%;
+}
+
+.gornji li:hover {
+    background-color: slategrey;
+}
+
+#cetvrti_g{
+    float: right;
+}
+
+/* DONJI MENI */
+
+.donji ul {
+    list-style-type: none;
+    padding: 10px 10px 10px 0;
+    background-color: turquoise;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.donji li {
+    float: left;;
+    padding: 10px;
+    width: 10%;
+}
+
+.donji li:hover {
+    background-color: slategrey;
+}
+
+#cetvrti_d {
+    float: right;
+    /* padding-right: 10px;
+    margin-right: 0px; */
+}

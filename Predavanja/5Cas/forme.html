@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Forme</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="forme.css">
+</head>
+
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Form validation</legend>
+            <!-- Unos imena -->
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="Put your name here nigga"><br>
+            
+            <!-- Unos prezimena -->
+            <label for="surname">Surname:</label>
+            <input type="text" name="surname" id="surname"><br>
+
+            <!-- Unos lozinke -->
+            <label for="">Password:</label>
+            <input type="password"> <br>
+
+            <!-- Unos lozinke -->
+            <label for="">ReType password:</label>
+            <input type="password"> <br>
+
+            <!-- Choose gender -->
+            <label for="">Gender:</label>
+            <input type="radio" name="gender" value="m" id="male" checked>
+            <input type="radio" name="gender" value="f" id="female">
+            <input type="radio" name="gender" value="o" id="other">
+            <br>
+
+            <!-- Programming skills -->
+            <label for="">Programming skills:</label>
+            <input type="checkbox" name="skills" id="">Java
+            <input type="checkbox" name="skills" id="">Android
+            <input type="checkbox" name="skills" id="">Ruby
+            <input type="checkbox" name="skills" id="">.Net
+            <br>
+
+            <!-- Broj telefona -->
+            <label for="">Contact no:</label>
+            <input type="number">
+            <br>
+
+            <!-- Unos maila -->
+            <label for="">E-mail:</label>
+            <input type="email">
+            <br>
+
+            <!-- Select College-->
+            <label for="">College:</label>
+            <select name="college" id="" >
+                <option value="select">Select college</option>
+                <option value="pravni">Pravni</option>
+                <option value="pmf">Prirodno matematicki</option>
+                <option value="etf">Elektotehnicki</option>
+            </select>
+            <br>
+
+            <!-- Submit button -->
+            <input type="submit" value="Submit" id="dugme">
+        </fieldset>
+    </form>
+</body>
+
+</html>

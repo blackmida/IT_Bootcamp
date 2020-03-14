@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+[class*="col-"]{
+    float: left;
+    width: 100px;
+}
+
+header, footer{
+    background-color: aquamarine;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer{
+    position: relative;
+    bottom: 0;
+}
+
+/* SEKCIJA 1 = Menu + Aside */
+nav {
+    background-color: azure;   
+}
+
+nav>ul{
+    list-style-type: none;
+}
+
+nav a{
+    text-decoration: none;
+    display: block;
+    padding: 10px 10px;
+}
+
+nav a:hover{
+    background-color: cadetblue;
+}
+
+
+aside{
+    background-color: bisque;  
+}
+
+/* SECTION2 - slike za kupovinu */
+.section2 {
+    text-align: center;
+}
+
+.section2 img{
+    width: 100%;
+    padding: 5px;
+    opacity: 0.8;
+}
+
+.section2 img:hover{
+    opacity: 1;
+    transition: 0.5s;
+}
+
+
+/* SECTION3 - SEKCIJA SA KARTICAMA CLANSTVA */
+.section3 {
+    text-align: center;
+    width: 100%;
+}
+.card{
+    padding: 20px;
+}
+
+.section3 img{
+    width: 50%;
+}
+
+
+/* SECTION 4 - SEKCIJA SA FORMOM */
+form{
+    width: 100%;
+}
+.red {
+    margin: 5px 0;
+    width: 100%;
+}
+
+/* MEDIA QUERIES */
+
+/* ZA DESKTOP */
+@media only screen and (min-width: 700px){
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+
+/* ZA MOBILNI */
+@media only screen and (max-width: 700px){
+    [class*="col-"] {
+        width: 100%;
+    }
+}

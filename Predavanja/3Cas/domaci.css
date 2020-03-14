@@ -1,0 +1,16 @@
+table{
+    text-align: center;
+    background-image: url("img/bckgrnd.jpeg");
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    width: 50%;
+    height: 200px;
+}
+
+table, tr, td{
+    border: 2px double darkblue;
+}
+
+#prvi{
+    font-weight: bold;
+}
