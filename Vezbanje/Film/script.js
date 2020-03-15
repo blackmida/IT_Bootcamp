@@ -6,6 +6,8 @@ let f3 = new Film('Harry Potter', 'Chris Columbus', 2001, [5, 7, 2, 6]);
 
 let filmovi = [f1, f2, f3];
 
+
+
 filmovi.forEach(el => {
     el.stampaj();
     console.log(`Prosek ocena ovog filma je: ${el.prosek()}`);
@@ -89,6 +91,7 @@ najmanjaOcenaNajboljeg(filmovi);
 
 //najmanja ocena od svih ocena svih filmova
 
+console.log('');
 let najmanjaOcena = niz => {
     let min = Infinity;
     niz.forEach(f => {
@@ -102,17 +105,42 @@ let najmanjaOcena = niz => {
 };
 console.log(`Najmanja ocena koju je neki film dobio je: ${najmanjaOcena(filmovi)}`);
 
-//
+// najcesca cena - prosledjuje niz filmova, a vraca se najcesca ocena koju su dobijali
+let oceneNiz = [3, 1, 5, 7, 2, 4, 7, 5, 7, 2, 6];
+let najcescaOcena = oceneNiz => {
+    let brPonovaljaja = 0;
+    let maxPonavljaja = 0;
+    let broj = oceneNiz[0];
 
+    for (let i = 0; i < oceneNiz.length; i++) {
+        for (let j = 0; j < oceneNiz.length; j++) {
+            if (oceneNiz[i] == oceneNiz[j]) {
+                brPonovaljaja++;
+            };
+        };
+        if (brPonovaljaja > maxPonavljaja) {
+            maxPonavljaja = brPonovaljaja;
+            broj = oceneNiz[i];
+        };
+        brPonovaljaja = 0;
+    };
+    return broj;
+}
+
+console.log('');
+console.log('Najcesca ocena je:');
+console.log(najcescaOcena(oceneNiz));
 
 
 
 // iznad ocene, prosledi se niz i ocena, a vracaju e filmovi koji su bolje ocenjeni
 
+console.log(``);
+console.log(`Filmovi koji su ocenjeni bolje od prosledjene ocene su:`);
 let iznadOcene = (niz, ocena) => {
     let filmoviIznad = [];
     niz.forEach(el => {
-        if(el.prosek()>ocena){
+        if (el.prosek() > ocena) {
             filmoviIznad.push(el);
         };
     });
@@ -121,3 +149,23 @@ let iznadOcene = (niz, ocena) => {
 iznadOcene(filmovi, 4.2).forEach(el => {
     el.stampaj();
 });
+
+//iznad ocene, a noviji je
+
+let iznadOceneNoviji = (niz, ocena) =>{
+    let noviNizFilmova = iznadOcene(niz,ocena);
+    let najnoviji = noviNizFilmova[0];
+    let godina = -Infinity;
+    noviNizFilmova.forEach(f => {
+        if(f.godinaIzdanja > godina){
+            godina = f.godinaIzdanja;
+            najnoviji = f;
+        };
+    });
+
+    return najnoviji;
+}
+
+console.log('');
+console.log('Najnoviji film iznad ocene je:');
+iznadOceneNoviji(filmovi, 4.2).stampaj();

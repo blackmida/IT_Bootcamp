@@ -301,8 +301,31 @@ let najmanjaOcena = niz => {
 };
 console.log(`Najmanja ocena koju je neki film dobio je: ${najmanjaOcena(filmovi)}`);
 
-//
+// najcesca cena - prosledjuje niz filmova, a vraca se najcesca ocena koju su dobijali
+let oceneNiz = [3, 1, 5, 7, 2, 4, 7, 5, 7, 2, 6];
+let najcescaOcena = oceneNiz => {
+    let brPonovaljaja = 0;
+    let maxPonavljaja = 0;
+    let broj = oceneNiz[0];
 
+    for (let i = 0; i < oceneNiz.length; i++) {
+        for (let j = 0; j < oceneNiz.length; j++) {
+            if (oceneNiz[i] == oceneNiz[j]) {
+                brPonovaljaja++;
+            };
+        };
+        if (brPonovaljaja > maxPonavljaja) {
+            maxPonavljaja = brPonovaljaja;
+            broj = oceneNiz[i];
+        };
+        brPonovaljaja = 0;
+    };
+    return broj;
+}
+
+console.log('');
+console.log('Najcesca ocena je:');
+console.log(najcescaOcena(oceneNiz));
 
 
 
@@ -320,3 +343,22 @@ let iznadOcene = (niz, ocena) => {
 iznadOcene(filmovi, 4.2).forEach(el => {
     el.stampaj();
 });
+
+// prosledi se niz i ocena,a vraca najnoviji film iznad te ocene
+let iznadOceneNoviji = (niz, ocena) =>{
+    let noviNizFilmova = iznadOcene(niz,ocena);
+    let najnoviji = noviNizFilmova[0];
+    let godina = -Infinity;
+    noviNizFilmova.forEach(f => {
+        if(f.godinaIzdanja > godina){
+            godina = f.godinaIzdanja;
+            najnoviji = f;
+        };
+    });
+
+    return najnoviji;
+}
+
+console.log('');
+console.log('Najnoviji film iznad ocene je:');
+iznadOceneNoviji(filmovi, 4.2).stampaj();
