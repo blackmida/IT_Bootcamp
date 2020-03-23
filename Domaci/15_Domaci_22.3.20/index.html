@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAbPZjhyvUOuOCNKEIDoIS-jhkhpp9STeg",
+        authDomain: "itbootcamp-b6c29.firebaseapp.com",
+        databaseURL: "https://itbootcamp-b6c29.firebaseio.com",
+        projectId: "itbootcamp-b6c29",
+        storageBucket: "itbootcamp-b6c29.appspot.com",
+        messagingSenderId: "536029316178",
+        appId: "1:536029316178:web:931a9197784b2055c60b8b"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      let db = firebase.firestore(); //db - objekat konekcije ka firestore bazi
+    </script>
+
+    <script src="script.js" async defer></script>
+  </body>
+</html>
