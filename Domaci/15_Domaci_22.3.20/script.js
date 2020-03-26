@@ -120,7 +120,7 @@ movies
     .get()
     .then(snapshot => {
         snapshot.docs.forEach(doc => {
-            console.log('Film sa ocenom: ',doc.id, '=>', doc.data().name, doc.data().rating);
+            console.log('Film sa ocenom vecom od 5: ',doc.id, '=>', doc.data().name, doc.data().rating);
         })
     })
     .catch(error => { console.error('Cannot find that director: ', error) })
@@ -151,35 +151,27 @@ movies
 
 // Najbolje rangiran film
 movies
+    .orderBy('rating', 'desc')
+    .limit(1)
     .get()
     .then(snapshot => {
-        let theBestGrade = -Infinity;
-        let theBestMovie = snapshot.docs[0];
-        snapshot.docs.forEach(doc=>{
-            if(doc.data().rating>theBestGrade){
-                theBestGrade = doc.data().rating;
-                theBestMovie = doc.data();
-            };
+        snapshot.docs.forEach(doc => {
+            console.log("The best rated movie is: ", doc.data());
         });
-        // console.log(`The best rated movie is: ${theBestMovie.name}`);
-        console.log(`The best rated movie is: `,theBestMovie);
     })
-    .catch(error => { console.error('Cannot find that document: '), error })
+    .catch(error => {console.error("Cannot get documents from collection: ", error)});
 
+    
 // Najslabije rangirana drama
 movies
     .where('genres', 'array-contains', 'Drama')
+    .orderBy('rating', 'asc')
+    .limit(1)
     .get()
     .then(snapshot => {
-        let theLowestGrade = Infinity;
-        let theWorstMovie = snapshot.docs[0];
-        snapshot.docs.forEach( doc => {
-            if(doc.data().rating<theLowestGrade){
-                theLowestGrade = doc.data().rating;
-                theWorstMovie = doc.data();
-            };
+        snapshot.docs.forEach(doc => {
+            console.log("The worst drama movie is: ", doc.data());
         });
-        // console.log(`The worst drama movie is ${theWorstMovie.name}, and his grade is ${theLowestGrade}`);
-        console.log(`The worst rated drama movie is: `,theWorstMovie);
     })
-    .catch(error => {console.log('Cannot find that document: ', error)})
+    .catch(error => {console.error("Cannot get documents from collection: ", error)});
+
