@@ -41,7 +41,7 @@ export class Chatroom{
         let response = await this.chats.add(docChat); 
         return response;
     }
-
+    
     getChets(callback){
         this.unsub = this.chats
                     .where('room','==',this.room)
@@ -70,6 +70,13 @@ export class Chatroom{
             this.unsub();
         }
     }
+
+    // updateColor(color){
+    //     localStorage.setItem('colorLS', color);
+    //     document.body.style.backgroundColor = `${color}`;
+        
+    // }
+
 
 }
 

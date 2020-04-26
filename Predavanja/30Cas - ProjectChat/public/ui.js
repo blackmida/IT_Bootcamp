@@ -20,15 +20,31 @@ export class ChatUI{
         let h = date.getHours();
         let min = date.getMinutes();
 
+
+        let danasnji = new Date();
+        let danasnjiDan = danasnji.getDate();
+        let danasnjiMesec = danasnji.getMonth() + 1;
+        let danasnjiGodina = danasnji.getFullYear();
+
         //Dodavanje 0 ispred jednocifrenih vrednosti
         d = String(d).padStart(2,"0");
         m = String(m).padStart(2,"0");
         h = String(h).padStart(2,"0");
         min = String(min).padStart(2, "0");
 
-        let strDate = d + "." + m + "." + y + ". - " + h + ":" + min;
+        danasnjiDan = String(danasnjiDan).padStart(2,"0");
+        danasnjiMesec = String(danasnjiMesec).padStart(2,"0");
 
-        return strDate;
+        
+        if(d==danasnjiDan && m==danasnjiMesec && y==danasnjiGodina){
+            let strDate = h + ":" + min;
+            return strDate;
+        }
+        else{
+            let strDate = d + "." + m + "." + y + ". - " + h + ":" + min;
+            return strDate;
+        }
+        
     }
 
     //Metod koji pravi osnovu za prikaz list item-a
@@ -48,6 +64,7 @@ export class ChatUI{
         `   <span class="username">${data.username} : </span>
             <span class="message">${data.message}</span>
             <div class="date">${strDate}</div>
+            <div class="image"><img class="img" src="img/bin.png"></div>
         </li>`;
         this.list.innerHTML += htmlLI;
         this.list.scrollTop = this.list.scrollHeight;

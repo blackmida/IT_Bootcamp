@@ -33,9 +33,21 @@
     </section>
 
     <div id="bottom">
+        <!-- Forma za colorpicker -->
+        <form action="" id="formColor">
+            <input type="color" name="" id="inputColor" value="#ffffff">
+            <input type="submit" value="Update Color" id="btnColor" class="btn">
+        </form>
+        <!-- Forma za date -->
+        <form action="" id="formDate">
+            <input type="datetime-local" name="" id="dateFrom">
+            <input type="datetime-local" name="" id="dateTo">
+            <input type="submit" value="Set Dates" id="btnDates" class="btn">
+        </form>
         <!-- Forma za unos poruke -->
         <form id="formMessage">
-            <input type="text" placeholder="Your message..." id="inputMessage">
+            <!-- <input type="text" placeholder="Your message..." id="inputMessage"> -->
+            <textarea name="textMessage" id="inputMessage" cols="" rows="" placeholder="Your message.."></textarea>
             <input type="submit" value="Send" id="btnSend" class="btn">
         </form>
 
