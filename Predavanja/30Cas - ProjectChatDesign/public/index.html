@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITBootcamp Chat</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container vrh">
+            <p id="logo"><span id="spanLogo">IT</span>Bootcamp Chat</p>
+            <p id="divUpdatedUsername">bla</p>
+        </div>
+    </header>
+    <!-- Naslov četa -->
+    <!--
+    <div id="top">
+        <div>
+            <h1>ITBootcamp Chat</h1>
+            <h2>Choose a chatroom</h2>
+        </div>
+    -->
+        <!-- Dugmad za sobe (chatrooms) -->
+        <nav>
+            <button id="general" class="btn">#general</button>
+            <button id="js" class="btn">#js</button>
+            <button id="homeworks" class="btn">#homeworks</button>
+            <button id="tests" class="btn">#tests</button>
+        </nav>
+    </div>
+
+    <!-- Prostor za poruke -->
+    <section>
+        <ul id="ulMessages">
+            <!-- Ovde će se nalaziti poruke -->
+        </ul>
+    </section>
+
+    <div id="bottom">
+        <!-- Forma za colorpicker -->
+        <form action="" id="formColor">
+            <input type="color" name="" id="inputColor" value="#ffffff">
+            <input type="submit" value="Update Color" id="btnColor" class="btn">
+        </form>
+        <!-- Forma za date -->
+        <form action="" id="formDate">
+            <input type="datetime-local" name="" id="dateFrom">
+            <input type="datetime-local" name="" id="dateTo">
+            <input type="submit" value="Set Dates" id="btnDates" class="btn">
+        </form>
+        <!-- Forma za unos poruke -->
+        <form id="formMessage">
+            <!-- <input type="text" placeholder="Your message..." id="inputMessage"> -->
+            <textarea name="textMessage" id="inputMessage" cols="" rows="" placeholder="Your message.."></textarea>
+            <input type="submit" value="Send" id="btnSend" class="btn">
+        </form>
+
+        <!-- Forma za promenu korisničkog imena -->
+        <form id="formUsername">
+            <input type="text" placeholder="Update username" id="inputUsername">
+            <input type="submit" value="Update" id="btnUpdate" class="btn">
+        </form>
+
+        <div id="divUpdatedUsername">
+        </div>
+    </div>
+
+    
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAbPZjhyvUOuOCNKEIDoIS-jhkhpp9STeg",
+    authDomain: "itbootcamp-b6c29.firebaseapp.com",
+    databaseURL: "https://itbootcamp-b6c29.firebaseio.com",
+    projectId: "itbootcamp-b6c29",
+    storageBucket: "itbootcamp-b6c29.appspot.com",
+    messagingSenderId: "536029316178",
+    appId: "1:536029316178:web:931a9197784b2055c60b8b"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  let db = firebase.firestore();
+</script>
+
+    <!-- Povezivanje sa eksternim js fajlovima -->
+    <script src="app.js" type="module"></script>
+    <script src="chat.js" type="module"></script>
+    <script src="ui.js" type="module"></script>
+</body>
+</html>
